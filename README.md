@@ -4,7 +4,7 @@
 Add the EKS repository to Helm:
 
 ```sh
-helm repo add eks https://aws.github.io/eks-charts
+helm repo add eks http://code.mx51.io/helm-chart-packages/
 ```
 
 ### AWS Calico
