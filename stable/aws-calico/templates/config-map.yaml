@@ -1,0 +1,12 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: "{{ include "aws-calico.fullname" . }}-typha-horizontal-autoscaler"
+  labels:
+{{ include "aws-calico.labels" . | indent 4 }}
+data:
+  ladder: |-
+    {
+      "coresPerReplica": {{ .Values.autoscaler.coresPerReplica }},
+      "nodesPerReplica": {{ .Values.autoscaler.nodesPerReplica }}
+    }
