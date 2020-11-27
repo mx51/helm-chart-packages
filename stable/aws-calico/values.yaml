@@ -12,6 +12,8 @@ calico:
   typha:
     logseverity: Info #Debug, Info, Warning, Error, Fatal
     image: quay.io/calico/typha
+    maxUnavailable: 1
+    minAvailable: 1
     resources:
       requests:
         memory: "64Mi"
