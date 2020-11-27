@@ -7,7 +7,8 @@ metadata:
     app.kubernetes.io/name: "{{ include "aws-calico.fullname" . }}-typha"
 {{ include "aws-calico.labels" . | indent 4 }}
 spec:
-  maxUnavailable: 1
+  maxUnavailable: {{ .Values.autoscaling.maxUnavailable }}
+  minAvailable: {{ .Values.autoscaling.minAvailable }}
   selector:
     matchLabels:
       app.kubernetes.io/name: "{{ include "aws-calico.fullname" . }}-typha"
