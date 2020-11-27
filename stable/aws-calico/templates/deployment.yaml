@@ -24,7 +24,7 @@ spec:
       nodeSelector:
         {{- toYaml .Values.calico.typha.nodeSelector | nindent 8 }}
       tolerations:
-        # Mark the pod as a critical add-on for rescheduling.
+        # Mark the pod as a critical add-on for rescheduling
         - key: CriticalAddonsOnly
           operator: Exists
         {{- if .Values.calico.typha.tolerations }}
