@@ -12,8 +12,11 @@ calico:
   typha:
     logseverity: Info #Debug, Info, Warning, Error, Fatal
     image: quay.io/calico/typha
-    maxUnavailable: 1
-    minAvailable: 1
+    # Controls a PodDisruptionBudget for the Typha pod. Suggested use if having one always running
+    podDisruptionBudget:
+      enabled: true
+      # minAvailable: 1
+      maxUnavailable: 1
     resources:
       requests:
         memory: "64Mi"
