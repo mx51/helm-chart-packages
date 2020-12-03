@@ -7,6 +7,6 @@ metadata:
 data:
   ladder: |-
     {
-      "coresPerReplica": {{ .Values.autoscaler.coresPerReplica }},
-      "nodesPerReplica": {{ .Values.autoscaler.nodesPerReplica }}
+      "coresToReplicas": {{ .Values.autoscaler.coresToReplicas }},
+      "nodesToReplicas": {{ .Values.autoscaler.nodesToReplicas }}
     }
