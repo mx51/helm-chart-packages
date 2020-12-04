@@ -1,3 +1,5 @@
 helm-extra-args: --timeout 600
 check-version-increment: true
 debug: true
+chart-dirs: stable
+validate-maintainers: false

@@ -10,7 +10,7 @@ calico:
   tag: v3.15.1
 
   typha:
-    logseverity: Info #Debug, Info, Warning, Error, Fatal
+    logseverity: Info   # Debug, Info, Warning, Error, Fatal
     image: quay.io/calico/typha
     # Controls a PodDisruptionBudget for the Typha pod. Suggested use if having one always running
     podDisruptionBudget:
@@ -29,7 +29,7 @@ calico:
       beta.kubernetes.io/os: linux
     podAnnotations: {}
   node:
-    logseverity: Info #Debug, Info, Warning, Error, Fatal
+    logseverity: Info   # Debug, Info, Warning, Error, Fatal
     image: quay.io/calico/node
     resources:
       requests:
@@ -60,14 +60,18 @@ calico:
 autoscaler:
   tag: "1.7.1"
   image: k8s.gcr.io/cluster-proportional-autoscaler-amd64
-  coresToReplicas: []
-  nodesToReplicas: [
-    [1, 1],
-    [10, 2],
-    [100, 3],
-    [250, 4],
-    [500, 5],
-    [1000, 6],
-    [1500, 7],
-    [2000, 8]
-  ]
+  configData:
+    ladder: |-
+      {
+        "coresToReplicas": [],
+        "nodesToReplicas": [
+          [1, 1],
+          [10, 2],
+          [100, 3],
+          [250, 4],
+          [500, 5],
+          [1000, 6],
+          [1500, 7],
+          [2000, 8]
+        ]
+      }
