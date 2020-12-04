@@ -4,9 +4,7 @@ metadata:
   name: "{{ include "aws-calico.fullname" . }}-typha-horizontal-autoscaler"
   labels:
 {{ include "aws-calico.labels" . | indent 4 }}
+{{- with .Values.autoscaler.configData }}
 data:
-  ladder: |-
-    {
-      "coresToReplicas": {{ .Values.autoscaler.coresToReplicas  | quote }},
-      "nodesToReplicas": {{ .Values.autoscaler.nodesToReplicas  | quote }}
-    }
+  {{- toYaml . | nindent 2 }}
+{{- end }}
