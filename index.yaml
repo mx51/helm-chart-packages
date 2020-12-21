@@ -71,4 +71,21 @@ entries:
     urls:
     - https://github.com/mx51/helm-chart-packages/releases/download/aws-calico-0.0.2/aws-calico-0.0.2.tgz
     version: 0.0.2
+  metabase:
+  - apiVersion: v1
+    appVersion: v0.36.3
+    created: "2020-12-21T19:58:20.41942818Z"
+    description: The easy, open source way for everyone in your company to ask questions and learn from data.
+    digest: c8c70e2ed10007b81a4fadefb6d75d92a5b59dee49423202b26e869a809ed2b4
+    home: http://www.metabase.com/
+    icon: http://www.metabase.com/images/logo.svg
+    maintainers:
+    - email: phamminhthanh69@gmail.com
+      name: pmint93
+    name: metabase
+    sources:
+    - https://github.com/metabase/metabase
+    urls:
+    - https://github.com/mx51/helm-chart-packages/releases/download/metabase-0.13.2/metabase-0.13.2.tgz
+    version: 0.13.2
 generated: "2020-11-27T04:45:10.541664358Z"
