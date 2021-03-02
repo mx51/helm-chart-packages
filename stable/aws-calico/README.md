@@ -51,13 +51,13 @@ The following table lists the configurable parameters for this chart and their d
 | `calico.node.nodeSelector`             | Calico Node Node Selector                               | `{ beta.kubernetes.io/os: linux }` |
 | `calico.typha_autoscaler.resources`    | Calico Typha Autoscaler Resources                       | `requests.memory: 16Mi, requests.cpu: 10m, limits.memory: 32Mi, limits.cpu: 10m` |
 | `calico.typha_autoscaler.nodeSelector` | Calico Typha Autoscaler Node Selector                   | `{ beta.kubernetes.io/os: linux }` |
-| `calico.tag`                           | Calico version                                          | `v3.8.1`                        |
+| `calico.tag`                           | Calico version                                          | `v3.15.1`                       |
 | `fullnameOverride`                     | Override the fullname of the chart                      | `calico`                        |
-| `podSecurityPolicy.create`             | Specifies whether podSecurityPolicy and related rbac objects should be created    | `false`                          |
+| `podSecurityPolicy.create`             | Specifies whether podSecurityPolicy and related rbac objects should be created  | `false` |
 | `serviceAccount.name`                  | The name of the ServiceAccount to use                   | `nil`                           |
 | `serviceAccount.create`                | Specifies whether a ServiceAccount should be created    | `true`                          |
-| `autoscaler.image`                     | Cluster Proportional Autoscaler Image                   | `k8s.gcr.io/cluster-proportional-autoscaler-amd64` |
-| `autoscaler.tag`                       | Cluster Proportional Autoscaler version                 | `1.1.2`                                            |
+| `autoscaler.image`                     | Cluster Proportional Autoscaler Image                   | `k8s.gcr.io/cpa/cluster-proportional-autoscaler` |
+| `autoscaler.tag`                       | Cluster Proportional Autoscaler version                 | `1.8.3`                                          |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install` or provide a YAML file containing the values for the above parameters:
 
