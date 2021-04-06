@@ -7,11 +7,11 @@ podSecurityPolicy:
   create: false
 
 calico:
-  tag: v3.15.1
+  tag: v3.18.1
 
   typha:
     logseverity: Info   # Debug, Info, Warning, Error, Fatal
-    image: quay.io/calico/typha
+    image: calico/typha
     # Controls a PodDisruptionBudget for the Typha pod. Suggested use if having one always running
     podDisruptionBudget:
       enabled: true
@@ -30,7 +30,7 @@ calico:
     podAnnotations: {}
   node:
     logseverity: Info   # Debug, Info, Warning, Error, Fatal
-    image: quay.io/calico/node
+    image: calico/node
     resources:
       requests:
         memory: "32Mi"
