@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   aws-calico:
   - apiVersion: v1
+    appVersion: 3.18.1
+    created: "2021-04-06T05:34:54.735849513Z"
+    description: A Helm chart for installing Calico on AWS
+    digest: 1e1f2c096b0145868b5b26854952c9a708c3a8a7b62d5560c1d4203708c229fc
+    icon: https://www.projectcalico.org/wp-content/uploads/2019/09/Calico_Logo_Large_Calico.png
+    name: aws-calico
+    urls:
+    - https://github.com/mx51/helm-chart-packages/releases/download/aws-calico-0.0.10/aws-calico-0.0.10.tgz
+    version: 0.0.10
+  - apiVersion: v1
     appVersion: 3.15.1
     created: "2021-03-02T05:33:55.414505018Z"
     description: A Helm chart for installing Calico on AWS
@@ -85,7 +95,8 @@ entries:
   - apiVersion: v1
     appVersion: v0.36.3
     created: "2020-12-21T21:43:22.79786014Z"
-    description: The easy, open source way for everyone in your company to ask questions and learn from data.
+    description: The easy, open source way for everyone in your company to ask questions
+      and learn from data.
     digest: 48682a47ef4743c3af9ff6c0c856ed9f3271b82bbc4fe0719e0c6884e3db8171
     home: http://www.metabase.com/
     icon: http://www.metabase.com/images/logo.svg
@@ -101,7 +112,8 @@ entries:
   - apiVersion: v1
     appVersion: v0.36.3
     created: "2020-12-21T19:58:20.41942818Z"
-    description: The easy, open source way for everyone in your company to ask questions and learn from data.
+    description: The easy, open source way for everyone in your company to ask questions
+      and learn from data.
     digest: c8c70e2ed10007b81a4fadefb6d75d92a5b59dee49423202b26e869a809ed2b4
     home: http://www.metabase.com/
     icon: http://www.metabase.com/images/logo.svg
@@ -114,4 +126,4 @@ entries:
     urls:
     - https://github.com/mx51/helm-chart-packages/releases/download/metabase-0.13.2/metabase-0.13.2.tgz
     version: 0.13.2
-generated: "2020-11-27T04:45:10.541664358Z"
+generated: "2021-04-06T05:34:54.735893113Z"
