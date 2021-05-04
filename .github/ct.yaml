@@ -3,4 +3,4 @@ check-version-increment: true
 debug: true
 chart-dirs: stable
 validate-maintainers: false
-charts: aws-calico, metabase
+charts: stable/aws-calico,stable/metabase
