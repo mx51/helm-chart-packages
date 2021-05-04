@@ -1,5 +1,22 @@
 apiVersion: v1
 entries:
+  airflow:
+  - apiVersion: v1
+    created: "2021-05-04T01:23:34.126527202Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.3.12
+    description: Helm chart to deploy Apache Airflow
+    digest: cbc755544bf414a9635c60d78c46d2eefc2d51dd85db028b26648dd2edda8816
+    icon: https://airflow.apache.org/docs/apache-airflow/stable/_images/pin_large.png
+    keywords:
+    - airflow
+    name: airflow
+    urls:
+    - https://github.com/mx51/helm-chart-packages/releases/download/airflow-1.0.0-rc1/airflow-1.0.0-rc1.tgz
+    version: 1.0.0-rc1
   aws-calico:
   - apiVersion: v1
     appVersion: 3.18.1
@@ -126,4 +143,4 @@ entries:
     urls:
     - https://github.com/mx51/helm-chart-packages/releases/download/metabase-0.13.2/metabase-0.13.2.tgz
     version: 0.13.2
-generated: "2021-04-06T05:34:54.735893113Z"
+generated: "2021-05-04T01:23:34.126693013Z"
