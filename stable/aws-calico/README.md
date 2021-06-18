@@ -51,7 +51,7 @@ The following table lists the configurable parameters for this chart and their d
 | `calico.node.nodeSelector`             | Calico Node Node Selector                               | `{ beta.kubernetes.io/os: linux }` |
 | `calico.typha_autoscaler.resources`    | Calico Typha Autoscaler Resources                       | `requests.memory: 16Mi, requests.cpu: 10m, limits.memory: 32Mi, limits.cpu: 10m` |
 | `calico.typha_autoscaler.nodeSelector` | Calico Typha Autoscaler Node Selector                   | `{ beta.kubernetes.io/os: linux }` |
-| `calico.tag`                           | Calico version                                          | `v3.15.1`                       |
+| `calico.tag`                           | Calico version                                          | `v3.15.5`                       |
 | `fullnameOverride`                     | Override the fullname of the chart                      | `calico`                        |
 | `podSecurityPolicy.create`             | Specifies whether podSecurityPolicy and related rbac objects should be created  | `false` |
 | `serviceAccount.name`                  | The name of the ServiceAccount to use                   | `nil`                           |
