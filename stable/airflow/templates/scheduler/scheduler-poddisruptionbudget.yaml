@@ -20,7 +20,7 @@
 #################################
 {{- if .Values.scheduler.podDisruptionBudget.enabled }}
 kind: PodDisruptionBudget
-apiVersion: policy/v1beta1
+apiVersion: policy/v1
 metadata:
   name: {{ .Release.Name }}-scheduler-pdb
   labels:
