@@ -2,6 +2,22 @@ apiVersion: v1
 entries:
   airflow:
   - apiVersion: v1
+    created: "2021-08-24T00:52:49.544775832Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.3.12
+    description: Helm chart to deploy Apache Airflow
+    digest: d96d0af216f5c1522af95cbde6c74f4958342a56c7ddd37793d8ca61a232e836
+    icon: https://airflow.apache.org/docs/apache-airflow/stable/_images/pin_large.png
+    keywords:
+    - airflow
+    name: airflow
+    urls:
+    - https://github.com/mx51/helm-chart-packages/releases/download/airflow-1.0.0-rc4/airflow-1.0.0-rc4.tgz
+    version: 1.0.0-rc4
+  - apiVersion: v1
     created: "2021-05-10T06:53:31.235134895Z"
     dependencies:
     - condition: postgresql.enabled
@@ -50,6 +66,16 @@ entries:
     - https://github.com/mx51/helm-chart-packages/releases/download/airflow-1.0.0-rc1/airflow-1.0.0-rc1.tgz
     version: 1.0.0-rc1
   aws-calico:
+  - apiVersion: v1
+    appVersion: 3.19.2
+    created: "2021-08-24T00:52:49.628395024Z"
+    description: A Helm chart for installing Calico on AWS
+    digest: 1c4a822797ee4b64013b284bd74457c8743a803f60b11d444902b88dfdd378d2
+    icon: https://www.projectcalico.org/wp-content/uploads/2019/09/Calico_Logo_Large_Calico.png
+    name: aws-calico
+    urls:
+    - https://github.com/mx51/helm-chart-packages/releases/download/aws-calico-0.0.12/aws-calico-0.0.12.tgz
+    version: 0.0.12
   - apiVersion: v1
     appVersion: 3.15.1
     created: "2021-06-18T04:44:48.076830137Z"
@@ -185,4 +211,4 @@ entries:
     urls:
     - https://github.com/mx51/helm-chart-packages/releases/download/metabase-0.13.2/metabase-0.13.2.tgz
     version: 0.13.2
-generated: "2021-06-18T04:44:48.076881916Z"
+generated: "2021-08-24T00:52:49.628482725Z"
