@@ -58,7 +58,7 @@ calico:
     podAnnotations: {}
 
 autoscaler:
-  tag: "1.8.3"
+  tag: "1.8.5"
   image: k8s.gcr.io/cpa/cluster-proportional-autoscaler
   configData:
     ladder: |-
