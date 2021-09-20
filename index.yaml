@@ -67,6 +67,16 @@ entries:
     version: 1.0.0-rc1
   aws-calico:
   - apiVersion: v1
+    appVersion: 3.19.3
+    created: "2021-09-20T01:39:21.583028887Z"
+    description: A Helm chart for installing Calico on AWS
+    digest: fddc01e0aecad86a77ac1b46051ca0f5d8dbcd2f3e3d615698a8f6947df7fd0e
+    icon: https://www.projectcalico.org/wp-content/uploads/2019/09/Calico_Logo_Large_Calico.png
+    name: aws-calico
+    urls:
+    - https://github.com/mx51/helm-chart-packages/releases/download/aws-calico-0.0.14/aws-calico-0.0.14.tgz
+    version: 0.0.14
+  - apiVersion: v1
     appVersion: 3.19.2
     created: "2021-08-24T05:24:00.118826096Z"
     description: A Helm chart for installing Calico on AWS
@@ -221,4 +231,4 @@ entries:
     urls:
     - https://github.com/mx51/helm-chart-packages/releases/download/metabase-0.13.2/metabase-0.13.2.tgz
     version: 0.13.2
-generated: "2021-08-24T05:24:00.118890296Z"
+generated: "2021-09-20T01:39:21.583120087Z"
