@@ -231,4 +231,18 @@ entries:
     urls:
     - https://github.com/mx51/helm-chart-packages/releases/download/metabase-0.13.2/metabase-0.13.2.tgz
     version: 0.13.2
-generated: "2021-09-20T01:39:21.583120087Z"
+  ssm-secrets-webhook:
+  - apiVersion: v1
+    appVersion: 1.3.2
+    created: "2022-06-03T04:44:25.279341762Z"
+    description: A Helm chart that deploys a mutating admission webhook that configures
+      applications to request env vars from AWS SSM
+    digest: 7019475ffd424515a90778adc7ffc0024daa0343fd57f2eb59145b35d6eeb820
+    maintainers:
+    - name: Adam Wilmore
+    - name: Matt Lohier
+    name: ssm-secrets-webhook
+    urls:
+    - https://github.com/mx51/helm-chart-packages/releases/download/ssm-secrets-webhook-0.2.0/ssm-secrets-webhook-0.2.0.tgz
+    version: 0.2.0
+generated: "2022-06-03T04:44:25.279522364Z"
