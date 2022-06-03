@@ -1,0 +1,103 @@
+# Default values for ssm-secrets-webhook.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 2
+
+debug: false
+
+certificate:
+    useCertManager: false
+    generate: true
+    server:
+        tls:
+            crt:
+            key:
+    ca:
+        crt:
+image:
+  repository: pwillie/ssm-secrets-webhook
+  tag: v0.2.0
+  pullPolicy: IfNotPresent
+  imagePullSecrets: []
+
+service:
+  name: ssm-secrets-webhook
+  type: ClusterIP
+  externalPort: 443
+  internalPort: 8443
+
+env:
+  SSM_ENV_IMAGE: pwillie/ssm-env:v0.2.0
+  SSM_ENV_IMAGE_PULL_POLICY: IfNotPresent
+
+metrics:
+  enabled: false
+  port: 8443
+  serviceMonitor:
+    enabled: false
+    scheme: https
+    tlsConfig:
+      insecureSkipVerify: true
+
+volumes: []
+
+volumeMounts: []
+
+podAnnotations: {}
+
+labels: {}
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+## Assign a PriorityClassName to pods if set
+priorityClassName: ""
+
+rbac:
+  enabled: true
+  psp:
+    enabled: false
+
+# A list of Kubernetes resource types to mutate as well:
+# Example: ["ingresses", "servicemonitors"] 
+customResourceMutations: []
+
+customResourcesFailurePolicy: Ignore
+
+# This can cause issues when used with Helm, so it is not enabled by default
+configMapMutation: false
+
+configmapFailurePolicy: Ignore
+
+podsFailurePolicy: Ignore
+
+secretsFailurePolicy: Ignore
+
+apiSideEffectValue: NoneOnDryRun
+
+namespaceSelector:
+  matchExpressions:
+  - key: name
+    operator: NotIn
+    values:
+    - kube-system
+  # matchLabels:
+  #   ssm-injection: enabled
+
+# In case of the K8s cluster version is above 1.15 objectSelector is usable
+objectSelector: {}
+  # matchExpressions:
+  # - key: security.mspenv.io/mutate
+  #   operator: NotIn
+  #   values:
+  #   - skip
+
+podDisruptionBudget:
+  enabled: true
+  minAvailable: 1
