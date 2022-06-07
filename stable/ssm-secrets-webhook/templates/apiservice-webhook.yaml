@@ -61,7 +61,8 @@ webhooks:
     resources:
     - pods
   failurePolicy: {{ .Values.podsFailurePolicy }}
-  admissionReviewVersions: ["v1", "v1beta1"]
+  admissionReviewVersions:
+  - "v1beta1"
   sideEffects: None
   namespaceSelector:
   {{- if .Values.namespaceSelector.matchLabels }}
@@ -105,7 +106,8 @@ webhooks:
     resources:
     - secrets
   failurePolicy: {{ .Values.secretsFailurePolicy }}
-  admissionReviewVersions: ["v1", "v1beta1"]
+  admissionReviewVersions:
+  - "v1beta1"
   sideEffects: None
   namespaceSelector:
   {{- if .Values.namespaceSelector.matchLabels }}
@@ -139,7 +141,8 @@ webhooks:
       resources:
         - configmaps
   failurePolicy: {{ .Values.configmapFailurePolicy }}
-  admissionReviewVersions: ["v1", "v1beta1"]
+  admissionReviewVersions:
+  - "v1beta1"
   sideEffects: None
   namespaceSelector:
   {{- if .Values.namespaceSelector.matchLabels }}
@@ -174,7 +177,8 @@ webhooks:
     resources:
 {{ toYaml .Values.customResourceMutations | indent 6 }}
   failurePolicy: {{ .Values.customResourcesFailurePolicy }}
-  admissionReviewVersions: ["v1", "v1beta1"]
+  admissionReviewVersions:
+  - "v1beta1"
   sideEffects: None
   namespaceSelector:
   {{- if .Values.namespaceSelector.matchLabels }}
