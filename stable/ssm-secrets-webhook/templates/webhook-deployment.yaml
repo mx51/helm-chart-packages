@@ -3,6 +3,10 @@ kind: Deployment
 metadata:
   name: {{ template "ssm-secrets-webhook.fullname" . }}
   namespace: {{ .Release.Namespace }}
+    annotations:
+      {{- with .Values.deploymentAnnotations }}
+      {{- toYaml . | nindent 6 }}
+      {{- end }}
   labels:
     helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
     app.kubernetes.io/name: {{ template "ssm-secrets-webhook.name" . }}
