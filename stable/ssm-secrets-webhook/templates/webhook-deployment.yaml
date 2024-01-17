@@ -33,8 +33,8 @@ spec:
         {{- with .Values.podAnnotations }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
-     spec:
-        serviceAccountName: {{ template "ssm-secrets-webhook.fullname" . }}
+    spec:
+      serviceAccountName: {{ template "ssm-secrets-webhook.fullname" . }}
       {{- if .Values.priorityClassName }}
       priorityClassName: {{ .Values.priorityClassName }}
       {{- end }}
