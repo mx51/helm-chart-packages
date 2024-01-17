@@ -16,7 +16,7 @@ else
 fi
 LAST_RELEASE_TAG=$(git describe $LAST_RELEASE_HASH --tags)
 cd ${STABLE}
-echo "📝 Checking for updated Chart versions since the last eks-charts release $LAST_RELEASE_TAG"
+echo "📝 Checking for updated Chart versions since the last release $LAST_RELEASE_TAG"
 for d in */; do
     LAST_COMMIT_HASH=$(git --no-pager log --pretty=tformat:"%H" -- $d | awk 'FNR <= 1')
     ## If LAST_RELEASE_HASH does not include the chart, then it's a new chart and does not need a version increment
@@ -26,7 +26,7 @@ for d in */; do
     fi
     ## If LAST_RELEASE_HASH is NOT an ancestor of LAST_COMMIT_HASH then it has not been modified 
     if [[ ! -z $LAST_COMMIT_HASH && -z $(git rev-list $LAST_COMMIT_HASH | grep $LAST_RELEASE_HASH) || $LAST_COMMIT_HASH == $LAST_RELEASE_HASH ]]; then
-    echo "✅ Chart $d had no changes since the last eks-charts release"
+    echo "✅ Chart $d had no changes since the last release"
     continue
     fi
     LAST_RELEASE_CHART_VERSION=$(git --no-pager show $LAST_RELEASE_HASH:stable/"$d"Chart.yaml | grep 'version:' | xargs | cut -d' ' -f2 | tr -d '[:space:]')
@@ -35,7 +35,7 @@ for d in */; do
     echo "❌ Chart $d has the same Chart version as the last release $LAST_COMMIT_CHART_VERSION"
     EXIT_CODE=1
     else 
-    echo "✅ Chart $d has a different version since the last eks-charts release ($LAST_RELEASE_CHART_VERSION -> $LAST_COMMIT_CHART_VERSION)"
+    echo "✅ Chart $d has a different version since the last release ($LAST_RELEASE_CHART_VERSION -> $LAST_COMMIT_CHART_VERSION)"
     fi
 done
 exit $EXIT_CODE
