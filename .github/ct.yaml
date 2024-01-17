@@ -3,4 +3,3 @@ check-version-increment: true
 debug: true
 chart-dirs: stable
 validate-maintainers: false
-charts: stable/aws-calico
