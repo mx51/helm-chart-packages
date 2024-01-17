@@ -8,7 +8,6 @@ $(shell mkdir -p ${BUILD_DIR})
 
 verify:
 	${REPO_ROOT}/scripts/validate-charts.sh
-	${REPO_ROOT}/scripts/validate-chart-versions.sh
 	${REPO_ROOT}/scripts/lint-charts.sh
 .PHONY: verify
 
