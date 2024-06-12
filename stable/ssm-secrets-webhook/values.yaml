@@ -65,8 +65,6 @@ priorityClassName: ""
 
 rbac:
   enabled: true
-  psp:
-    enabled: false
 
 # A list of Kubernetes resource types to mutate as well:
 # Example: ["ingresses", "servicemonitors"]
