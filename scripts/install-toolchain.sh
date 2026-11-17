@@ -10,7 +10,7 @@ TOOLS_DIR="${BUILD_DIR}/tools"
 mkdir -p "${TOOLS_DIR}"
 export PATH="${TOOLS_DIR}:${PATH}"
 
-HELMV3_VERSION="v3.12.3"
+HELMV3_VERSION="v3.22.1"
 KUBECTL_VERSION=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)
 
 ## Install kubectl
